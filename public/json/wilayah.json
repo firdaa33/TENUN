@@ -1,0 +1,119 @@
+{
+  "Nusa Tenggara Barat": {
+    "Kota Mataram": {
+      "Cakranegara": [
+        "Mayura",
+        "Sekarbela",
+        "Pejanggik"
+      ],
+      "Ampenan": [
+        "Banjar",
+        "Karang Pule",
+        "Ampenan Tengah"
+      ],
+      "Mataram": [
+        "Pagesangan",
+        "Dasan Agung",
+        "Jempong Baru"
+      ],
+      "Selaparang": [
+        "Rembiga",
+        "Pejanggik",
+        "Monjok"
+      ],
+      "Sandubaya": [
+        "Mandala",
+        "Bertais",
+        "Turida"
+      ]
+    },
+    "Kabupaten Lombok Barat": {
+      "Gerung": [
+        "Babussalam",
+        "Gapuk",
+        "Dasan Tapen"
+      ],
+      "Kediri": [
+        "Kediri Selatan",
+        "Lelede",
+        "Ombe Baru"
+      ],
+      "Sekotong": [
+        "Sekotong Tengah",
+        "Pelangan",
+        "Tawun"
+      ],
+      "Kuripan": [
+        "Kuripan Selatan",
+        "Kuripan Timur",
+        "Buwun Mas"
+      ]
+    },
+    "Kabupaten Lombok Tengah": {
+      "Praya": [
+        "Jontlak",
+        "Leneng",
+        "Mekar Sari"
+      ],
+      "Batukliang": [
+        "Tanak Awu",
+        "Selebung",
+        "Mantang"
+      ],
+      "Jonggat": [
+        "Mekarsari",
+        "Pemepek",
+        "Batujai"
+      ],
+      "Pujut": [
+        "Kuta",
+        "Pengembur",
+        "Tumpak"
+      ]
+    },
+    "Kabupaten Lombok Timur": {
+      "Selong": [
+        "Kelayu",
+        "Sekarteja",
+        "Tanjung"
+      ],
+      "Sakra": [
+        "Sakra Selatan",
+        "Gunung Rajak",
+        "Mendana"
+      ],
+      "Pringgabaya": [
+        "Apitaik",
+        "Kerumut",
+        "Pringgabaya Utara"
+      ],
+      "Aikmel": [
+        "Lenek",
+        "Aikmel Barat",
+        "Kalijaga"
+      ]
+    },
+    "Kabupaten Sumbawa": {
+      "Sumbawa": [
+        "Brang Biji",
+        "Bugis",
+        "Lape"
+      ],
+      "Utan": [
+        "Labuhan Bajo",
+        "Utan",
+        "Motong"
+      ],
+      "Ropang": [
+        "Ropang",
+        "Tepal",
+        "Punik"
+      ],
+      "Plampang": [
+        "Plampang",
+        "Sepayung",
+        "Labangka"
+      ]
+    }
+  }
+}
