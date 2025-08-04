@@ -24,7 +24,6 @@ use App\Http\Controllers\Admin\{
     DashboardController,
     InvoiceController
 };
-use App\Http\Controllers\ProductRatingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,7 +50,7 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::get('/login', [LoginController::class, 'create'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
-
+Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 /*
 |--------------------------------------------------------------------------
 | CART
