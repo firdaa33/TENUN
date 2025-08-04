@@ -37,7 +37,9 @@ Route::get('/about', AboutController::class)->name('about');
 Route::get('/produk', [ProductController::class, 'index'])->name('produk.index');
 Route::get('/produk/{product:slug}', [ProductController::class, 'show'])->name('produk.show');
 Route::get('/rate', [RatingController::class, 'index'])->name('rating.index');
-
+Route::get('/contact', function () {
+    return view('pages.contact'); // atau sesuai struktur kamu
+})->name('contact');
 
 /*
 |--------------------------------------------------------------------------
@@ -105,11 +107,6 @@ Route::middleware('auth')->group(function () {
     Route::get('/returns/{order}/create', [ReturnController::class, 'create'])->name('returns.create');
     Route::post('/returns', [ReturnController::class, 'store'])->name('returns.store');
     Route::post('/returns/{order}', [ReturnController::class, 'store'])->name('returns.store');
-
-    Route::get('/contact', function () {
-    return view('pages.contact'); // atau sesuai struktur kamu
-})->name('contact');
-
 });
 
 /*

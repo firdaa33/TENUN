@@ -16,7 +16,7 @@ class RatingController extends Controller
                 ->with('user', 'product')
                 ->get();
 
-    return view('ratings.index', compact('ratings'));
+    return view('rating.index', compact('ratings'));
 }
 
     public function create($product_id)
