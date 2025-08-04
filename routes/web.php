@@ -24,7 +24,6 @@ use App\Http\Controllers\Admin\{
     DashboardController,
     InvoiceController
 };
-use App\Http\Controllers\ProductRatingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +35,6 @@ Route::get('/', HomeController::class)->name('home');
 Route::get('/about', AboutController::class)->name('about');
 Route::get('/produk', [ProductController::class, 'index'])->name('produk.index');
 Route::get('/produk/{product:slug}', [ProductController::class, 'show'])->name('produk.show');
-Route::get('/rate', [RatingController::class, 'index'])->name('rating.index');
 
 
 /*
@@ -49,7 +47,7 @@ Route::post('/register', [RegisterController::class, 'register']);
 Route::get('/login', [LoginController::class, 'create'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LoginController::class, 'destroy'])->name('logout');
-
+Route::get('/rating', [RatingController::class, 'index'])->name('rating.index');
 /*
 |--------------------------------------------------------------------------
 | CART
@@ -107,8 +105,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/returns/{order}', [ReturnController::class, 'store'])->name('returns.store');
 
     Route::get('/contact', function () {
-    return view('pages.contact'); // atau sesuai struktur kamu
-})->name('contact');
+        return view('pages.contact'); // atau sesuai struktur kamu
+    })->name('contact');
 
 });
 

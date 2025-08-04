@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\OrderItem;
 use App\Models\Product;
 use App\Models\Rating;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 
 class RatingController extends Controller
 {
@@ -16,7 +15,7 @@ class RatingController extends Controller
                 ->with('user', 'product')
                 ->get();
 
-    return view('ratings.index', compact('ratings'));
+    return view('rating.index', data: compact('ratings'));
 }
 
     public function create($product_id)

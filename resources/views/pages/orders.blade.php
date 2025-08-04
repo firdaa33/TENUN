@@ -1,18 +1,18 @@
 @extends('layouts.customer')
 
 @section('content')
-<div class="max-w-4xl mx-auto px-4 py-8">
+<div class="max-w-4xl px-4 py-8 mx-auto">
 
-    <h2 class="text-xl font-bold mb-4">Pesanan Saya</h2>
+    <h2 class="mb-4 text-xl font-bold">Pesanan Saya</h2>
 
     {{-- Notifikasi --}}
     @if (session('success'))
-        <div class="bg-green-100 text-green-800 p-3 rounded mb-4">
+        <div class="p-3 mb-4 text-green-800 bg-green-100 rounded">
             {{ session('success') }}
         </div>
     @endif
 
-    <table class="w-full border text-sm">
+    <table class="w-full text-sm border">
         <thead>
             <tr class="bg-gray-100">
                 <th class="p-2 text-left">Tanggal</th>
@@ -55,23 +55,23 @@
                             {{-- Tombol Ajukan Pengembalian --}}
                             @if (!$o->return_request)
                                 <a href="{{ route('returns.create', ['order' => $o->id]) }}"
-                                    class="inline-block px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700 text-sm">
+                                    class="inline-block px-3 py-1 text-sm text-white bg-red-600 rounded hover:bg-red-700">
                                     Ajukan Pengembalian
                                 </a>
                             @else
                                 @php $statusReturn = $o->return_request->status; @endphp
                                 @if ($statusReturn === 'pending')
-                                    <span class="text-sm text-red-500 italic">Menunggu respon pengembalian</span>
+                                    <span class="text-sm italic text-red-500">Menunggu respon pengembalian</span>
                                 @elseif ($statusReturn === 'approved')
-                                    <span class="text-sm text-green-600 italic">Pengembalian disetujui</span>
+                                    <span class="text-sm italic text-green-600">Pengembalian disetujui</span>
                                 @elseif ($statusReturn === 'rejected')
-                                    <span class="text-sm text-gray-500 italic">Pengembalian ditolak</span>
+                                    <span class="text-sm italic text-gray-500">Pengembalian ditolak</span>
                                 @else
                                     <span class="text-sm italic text-yellow-700">Status tidak diketahui</span>
                                 @endif
                             @endif
                         @else
-                            <span class="text-gray-600 text-sm italic">-</span>
+                            <span class="text-sm italic text-gray-600">-</span>
                         @endif
 
                         {{-- Tombol Hapus (bisa di semua kondisi) --}}
@@ -79,12 +79,12 @@
                             onsubmit="return confirm('Yakin ingin menghapus pesanan ini?')">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="mt-2 text-red-600 hover:underline text-sm">
+                            <button type="submit" class="mt-2 text-sm text-red-600 hover:underline">
                                 Hapus Pesanan
                             </button>
                         </form>
                         @if (session('success'))
-                            <div class="bg-green-100 text-green-800 px-4 py-2 rounded mb-4">
+                            <div class="px-4 py-2 mb-4 text-green-800 bg-green-100 rounded">
                                 {{ session('success') }}
                             </div>
                         @endif
@@ -94,7 +94,7 @@
             </tr>
         @empty
             <tr>
-                <td colspan="4" class="text-center p-4">Belum ada pesanan</td>
+                <td colspan="4" class="p-4 text-center">Belum ada pesanan</td>
             </tr>
         @endforelse
         </tbody>
