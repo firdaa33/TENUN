@@ -46,6 +46,10 @@ return [
             'throttle' => 60,
         ],
     ],
+    'middleware' => [
+    'web',
+    'auth:admin', // ini penting agar hanya admin (guard:admin) yang bisa login
+],
 
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
